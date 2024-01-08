@@ -67,6 +67,21 @@ function isElementHalfVisible(el) {
 }
 
 
+/*Service script*/
+$(document).ready(function(){
+  $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      $('.services .box').each(function(){
+          var positionTop = $(this).offset().top;
+          // Si l'élément est à 30% de l'écran
+          if (positionTop - scroll < windowHeight * 0.8) {
+              $(this).addClass('show'); // Ajoutez une classe pour déclencher l'animation
+          }
+      });
+  });
+});
+
 
 
 /*Consumer script*/
@@ -76,15 +91,22 @@ $(document).ready(function(){
         margin:5,
        
         autoplay:true,
-        autoplayTimeout:2000,
+        autoplayTimeout:1500,
         autoplayHoverPause:true,
+        autoplaySpeed: 1000,
         responsive:{
             0:{
-                items:2 // Nombre de logos visibles à la fois pour les petites tailles d'écran
+                items:1 
             },
-            600:{
-                items:4 // Nombre de logos visibles à la fois pour les écrans de taille moyenne
+            350:{
+              items:2 
             },
+            500:{
+                items:3 
+            },
+            700:{
+              items:4 
+           },
             1000:{
                 items:6 // Nombre de logos visibles à la fois pour les grands écrans
             }

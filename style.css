@@ -135,7 +135,7 @@ header .fa-bars{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Couleur sombre avec une opacité de 0.5 */
+    background-color: rgba(0, 0, 0, 0.3); 
 }
 
 .home .slide-content {
@@ -149,7 +149,7 @@ header .fa-bars{
 }
 
 .slide-content.animate-up {
-    bottom: 20rem; /* Position finale */
+    bottom: 20rem; 
 }
 
 .slide-content h1 {
@@ -289,6 +289,15 @@ header .fa-bars{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 1s ease, transform 1s ease; 
+}
+
+.services .box-container .box.show {
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .services .box-container .box i{
@@ -375,7 +384,7 @@ header .fa-bars{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bluelight); /* Fond gris */
+    background: var(--bluelight); 
     height: 8rem;
     padding: 1rem;
 }
@@ -386,15 +395,15 @@ header .fa-bars{
 }
 
 .projects .box-container .box .content .link {
-    flex: 1; /* Partie droite prend 50% de l'espace */
-    background: var(--grey); /* Fond bleu */
+    flex: 1; 
+    background: var(--grey); 
     display: flex;
-    justify-content: center; /* Centrer la flèche */
-    align-items: center; /* Centrer la flèche */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .projects .box-container .box .content .link:hover {
-    background: var(--blue); /* Fond bleu */
+    background: var(--blue); 
     cursor: pointer;
 }
 
