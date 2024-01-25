@@ -98,7 +98,7 @@ $(document).ready(function(){
             0:{
                 items:1 
             },
-            350:{
+            250:{
               items:2 
             },
             500:{
@@ -108,13 +108,11 @@ $(document).ready(function(){
               items:4 
            },
             1000:{
-                items:6 // Nombre de logos visibles à la fois pour les grands écrans
+                items:6 
             }
         }
     });
 });
-
-
 
 /*Counter script*/
 const options = {
