@@ -1,3 +1,12 @@
+/*Header script*/
+let menu = document.querySelector('.fa-bars');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', function () {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+})
+
 /*Banner transition script*/
 document.addEventListener('DOMContentLoaded', function() {
   var content = document.querySelector('.banner .content');
