@@ -42,6 +42,8 @@ html::-webkit-scrollbar-thumb {
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
 }
 
 .heading {
@@ -254,14 +256,14 @@ header .fa-bars {
 
 .about .row .image {
     flex: 1 1 40rem;
-    padding: 5rem;
+    padding: 0 5rem;
     position: relative;
     z-index: 2;
 }
 
 .about .row .content {
     flex: 1 1 40rem;
-    padding: 5rem;
+    padding: 0 5rem;
 }
 
 .about .row .content {
@@ -290,7 +292,7 @@ header .fa-bars {
 .about .row .content p {
     font-size: 1.8rem;
     color: var(--grey);
-    padding: 2rem .2rem;
+    padding: 0rem .2rem;
 }
 
 .about .row .btn {
@@ -336,9 +338,9 @@ header .fa-bars {
     position: absolute;
     top: 30%;
     margin-left: 5%;
-    opacity: 0; 
-    transform: translateY(2rem); 
-    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out; 
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .banner .content.show {
@@ -366,9 +368,9 @@ header .fa-bars {
     margin: 5rem 20rem;
     display: flex;
     flex-direction: column;
-    opacity: 0; 
-    transform: translateY(2rem); 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .presentation .row.show {
@@ -432,9 +434,9 @@ header .fa-bars {
     gap: 1rem;
     margin: 2rem;
     flex: 2;
-    opacity: 0; 
-    transform: translateY(2rem); 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .ambition .row .images.show {
@@ -463,8 +465,8 @@ header .fa-bars {
     justify-content: center;
     align-items: center;
     margin: 3rem 0;
-    opacity: 0; 
-    transform: translateY(-2rem); 
+    opacity: 0;
+    transform: translateY(-2rem);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -552,10 +554,10 @@ header .fa-bars {
 }
 
 .management .area .image {
-    width: 30rem;
-    height: 30rem;
-    opacity: 0; 
-    transform: translateX(-20px); 
+    width: 20rem;
+    height: 20rem;
+    opacity: 0;
+    transform: translateX(-20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -568,7 +570,6 @@ header .fa-bars {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 .management .area p {
@@ -577,8 +578,6 @@ header .fa-bars {
     margin: 0 5rem;
 }
 
-
-
 /*Services section style*/
 .services .box-container {
     display: flex;
@@ -586,6 +585,7 @@ header .fa-bars {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0 5rem;
+    padding-bottom: 3rem;
     gap: 5rem;
 }
 
@@ -636,9 +636,115 @@ header .fa-bars {
     transform: scale(1.03);
 }
 
+.services .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.servicepage .text-area {
+    margin: 3rem 5rem;
+}
+
+.servicepage .text-area p {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.servicepage .row {
+    margin: 3rem 3rem;
+}
+
+.servicepage .row .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.servicepage .row .content .text-content h2 {
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.servicepage .row .content .text-content {
+    margin: 0 5rem;
+}
+
+.servicepage .row .content p {
+    font-size: 2rem;
+    color: var(--grey);
+    width: 40rem;
+}
+
+.servicepage .row .content .image {
+    width: 45rem;
+    height: 25rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+
+}
+
+.servicepage .row .content .image2 {
+    width: 30rem;
+    height: 30rem;
+}
+
+.servicepage .row .content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: .5rem solid var(--bluelight);
+}
+
+.servicepage .row .content .image:hover img {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+.servicepage .row .content .image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicepage .row .content .image {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-10%);
+}
+
+.servicepage .row .content .image2 {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(10%);
+}
+
+.servicepage .row .content:nth-child(odd) .image,
+.servicepage .row .content:nth-child(even) .image2 {
+    transform-origin: left center;
+}
+
+.servicepage .row .content:nth-child(odd) .image2,
+.servicepage .row .content:nth-child(even) .image {
+    transform-origin: right center;
+}
+
+.servicepage .row .content.show .image,
+.servicepage .row .content.show .image2 {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+
 /*Projects section style*/
 .projects {
     background: var(--white2);
+    padding: .5rem 0;
 }
 
 .projects .button {
@@ -763,7 +869,6 @@ header .fa-bars {
     text-align: center;
 }
 
-
 .stats {
     display: flex;
     justify-content: space-around;
@@ -800,7 +905,6 @@ header .fa-bars {
     font-size: 2.3rem;
 }
 
-
 /*Contact style*/
 .contact {
     background: var(--grey);
@@ -809,6 +913,60 @@ header .fa-bars {
 .contact .heading {
     color: var(--white);
 }
+
+.contact .subheading {
+    margin: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--white);
+    padding-top: 8rem;
+}
+
+.contact .subheading span {
+    color: var(--bluelight);
+}
+
+.contact form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact .button {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .form-container form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.contact form .inputBox input,
+textarea {
+    height: 4rem;
+    width: 49%;
+    background: #111;
+    color: var(--white);
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: none;
+}
+
+.contact form .inputBox input:focus,
+textarea:focus {
+    background: #222;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+}
+
 
 .contact .row {
     display: flex;
@@ -969,6 +1127,10 @@ header .fa-bars {
         font-size: 1.8rem;
     }
 
+    .services .box-container {
+        padding: 0 1.8rem;
+    }
+
     .footer .box-container .box {
         margin: 0 2rem;
     }
@@ -983,6 +1145,24 @@ header .fa-bars {
 
     .values .box-container .box {
         margin: 3rem;
+    }
+
+    .servicepage .row .content .text-content {
+        margin: 0 3rem;
+    }
+
+    .servicepage .row .content p {
+        width: 35rem;
+    }
+
+    .servicepage .row .content .image {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .servicepage .row .content .image2 {
+        width: 25rem;
+        height: 25rem;
     }
 
 }
@@ -1057,6 +1237,24 @@ header .fa-bars {
 
     .values .box-container {
         margin: 3rem 10rem;
+    }
+
+    .servicepage .row .content .text-content {
+        margin: 0 3rem;
+    }
+
+    .servicepage .row .content p {
+        width: 35rem;
+    }
+
+    .servicepage .row .content .image {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .servicepage .row .content .image2 {
+        width: 25rem;
+        height: 25rem;
     }
 
 }
@@ -1169,6 +1367,14 @@ header .fa-bars {
         margin: 2rem 5rem;
     }
 
+    .services {
+        margin-top: -10rem;
+    }
+
+    .servicepage .row .content .image2 {
+        display: none;
+    }
+
     .footer .box-container {
         padding: 3rem 1rem;
     }
@@ -1183,6 +1389,11 @@ header .fa-bars {
 
     .values .box-container .box {
         margin: 3rem;
+    }
+
+    .contact form .inputBox input,
+    textarea {
+        width: 100%;
     }
 }
 
@@ -1205,7 +1416,7 @@ header .fa-bars {
     }
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 
     html {
         font-size: 50%;
@@ -1243,6 +1454,23 @@ header .fa-bars {
     .values .box-container {
         margin: 3rem 1rem;
     }
+
+    .servicepage .row .content {
+        flex-wrap: wrap;
+        margin: 3rem 0;
+    }
+
+    .servicepage .row .content:nth-child(2) {
+        flex-wrap: wrap-reverse;
+    }
+
+    .servicepage .row .content:nth-child(4) {
+        flex-wrap: wrap-reverse;
+    }
+
+    .servicepage .row .content:nth-child(6) {
+        flex-wrap: wrap-reverse;
+    }
 }
 
 @media (max-width:420px) {
@@ -1253,12 +1481,17 @@ header .fa-bars {
     .presentation .row {
         margin: 5rem 5rem;
         opacity: 1;
-        transform: translateY(0rem); 
+        transform: translateY(0rem);
     }
 
     .consumer .consumer-container {
         padding: 2rem 5rem;
     }
+
+
+}
+
+@media (max-width:335px) {
 
     .footer .box-container {
         justify-content: start;
