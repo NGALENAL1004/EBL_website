@@ -8,6 +8,7 @@
     --black: #333;
     --grey: #666;
     --greylight: #7e7e7e;
+    --green:#A1C740;
     --webkit-clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
 }
 
@@ -145,8 +146,6 @@ header .fa-bars {
     position: relative;
     width: 100%;
     height: 85vh;
-    /* 75% de la hauteur de la fenêtre */
-
 }
 
 .home .slider .slide {
@@ -236,7 +235,7 @@ header .fa-bars {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0 4rem;
+    padding: 5rem 4rem;
     position: relative;
     overflow: hidden;
 }
@@ -331,7 +330,7 @@ header .fa-bars {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .banner .content {
@@ -831,6 +830,226 @@ header .fa-bars {
     font-size: 2rem;
 }
 
+/*HSEpage section style*/
+.navbar .green{
+    color: var(--green);
+}
+
+.hse .green{
+    color: var(--green);
+}
+
+.hse .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem;
+}
+
+.hse .row .image {
+    flex: 1 1 40rem;
+    padding: 0 1rem;
+}
+
+.hse .row .image img {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    object-fit: cover;
+}
+
+.hse .row .content {
+    flex: 1 1 40rem;
+    padding: 0 1rem;
+}
+
+.hse .row .content p {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.hse h2{
+    font-size: 3rem;
+    color: var(--grey);
+    text-align: center;
+}
+
+.hse h2 span{
+    color: var(--green);
+}
+
+.hse .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    margin: 3rem;
+    gap: 2rem;
+}
+
+.hse .box-container .box{
+    width: 35rem;
+    background: var(--white2);
+    padding: 2rem 0;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hse .box-container .box h3{
+    font-size: 2rem;
+    color: var(--grey);
+    padding: 1.5rem;
+    text-align: center;
+    height: 8rem;
+}
+
+.hse .box-container .box .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: .5rem solid var(--green);
+    width: 15rem;
+    height: 15rem;
+}
+.hse .box-container .box .img i{
+    font-size: 8rem;
+    text-align: center;
+    color: var(--green);
+}
+
+.hse .box-container .box ul{
+    list-style-type: none;
+}
+
+.hse .box-container .box ul i{
+    color: var(--green);
+    padding: 0 1rem;
+}
+
+.hse .box-container .box ul li{
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    height: 6rem;
+}
+
+.goals {
+    background: var(--white2);
+    padding: 0 3rem;
+}
+
+.goals p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.goals .row {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.goals .row .image {
+    width: 40rem;
+    height: 25rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+.goals .row .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: .5rem solid var(--bluelight);
+}
+
+.goals .row .image:hover img {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.goals .content {
+    display: flex;
+    gap: 2rem;
+}
+
+.goals .content ul {
+    padding: 1rem 0;
+    padding-left: 3rem;
+    list-style-type: circle;
+}
+
+.goals .content ul li {
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.politics {
+    background: var(--greylight);
+    margin-top: -2rem;
+    padding: 0 5rem;
+}
+
+.politics .subheading {
+    color: var(--white);
+}
+
+.politics p {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.politics .container {
+    padding: 0 2rem;
+}
+
+.politics .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.politics .container .content .image {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+.politics .container .content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: .5rem solid var(--bluelight);
+}
+
+.politics .container .content .image:hover img {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.politics .container .content ul {
+    width: 65rem;
+    padding-left: 15rem;
+}
+
+.politics .container .content ul li {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+
 /*Consumer section style*/
 .consumer .consumer-container {
     padding: 2rem 10rem;
@@ -961,7 +1180,7 @@ textarea:focus {
 }
 
 .contact form textarea {
-    height: 20rem;
+    height: 30rem;
     resize: none;
     padding: 1rem;
     width: 100%;
@@ -1165,6 +1384,17 @@ textarea:focus {
         height: 25rem;
     }
 
+    .hse .row .content p {
+        font-size: 1.8rem;
+    }
+
+    .politics .container .content ul li{
+       font-size: 1.8rem;
+    }
+
+    .hse .box-container {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width:990px) {
@@ -1257,6 +1487,19 @@ textarea:focus {
         height: 25rem;
     }
 
+    .hse .row .content p {
+        font-size: 1.6rem;
+    }
+
+    .politics .container .content {
+        flex-wrap: wrap;
+    }
+
+    .politics .container .content ul {
+        width: 65rem;
+        padding-left: 0rem;
+        padding-top: 2rem;
+    }
 }
 
 @media (max-width:870px) {
@@ -1395,6 +1638,30 @@ textarea:focus {
     textarea {
         width: 100%;
     }
+
+    .hse .row {
+        flex-wrap: wrap;
+    }
+
+    .hse .row .image {
+        flex: 1 1 60rem;
+    }
+
+    .hse .row .content {
+        flex: 1 1 60rem;
+    }
+
+    .hse .row .content p {
+        font-size: 2rem;
+    }
+
+    .goals .row .image {
+        width: 30rem;
+        height: 20rem;
+    }
+
+
+
 }
 
 @media (max-width:705px) {
@@ -1413,6 +1680,23 @@ textarea:focus {
 
     .management .area {
         margin: 2rem 2rem;
+    }
+
+    .goals .row {
+        flex-wrap: wrap;
+    }
+
+    .goals .row .image {
+        width: 40rem;
+        height: 25rem;
+    }
+
+    .goals .content {
+        flex-wrap: wrap;
+    }
+
+    .goals .content ul {
+        padding: 0;
     }
 }
 
