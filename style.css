@@ -898,6 +898,11 @@ header .fa-bars {
     align-items: center;
 }
 
+.hse .box-container .box:hover{
+   cursor: pointer;
+   box-shadow: 0 .3rem .5rem rgba(0,0,0,.8);
+}
+
 .hse .box-container .box h3{
     font-size: 2rem;
     color: var(--grey);
@@ -935,6 +940,51 @@ header .fa-bars {
     margin: 1rem 1rem;
     height: 6rem;
 }
+
+.commitment .green{
+    color: var(--green);
+}
+
+.commitment h2{
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+    color: var(--grey);
+}
+
+.commitment p{
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--grey);
+    margin: 2rem 0;
+}
+
+.commitment .container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 10rem;
+}
+
+.commitment .container .content:nth-child(2){
+    flex-direction:  row-reverse;
+}
+
+.commitment .container .content .image img{
+    width: 35rem;
+    height: 35rem;
+    object-fit: cover;
+}
+
+.commitment .container .content ul{
+    margin-left: 3rem;
+}
+
+.commitment .container .content ul li{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
 
 .goals {
     background: var(--white2);
@@ -1660,8 +1710,13 @@ textarea:focus {
         height: 20rem;
     }
 
-
-
+    .commitment .container .content{
+        flex-wrap: wrap;
+    }
+    
+    .commitment .container .content:nth-child(2){
+        flex-direction:  row-reverse;
+    }
 }
 
 @media (max-width:705px) {
@@ -1771,8 +1826,6 @@ textarea:focus {
     .consumer .consumer-container {
         padding: 2rem 5rem;
     }
-
-
 }
 
 @media (max-width:335px) {
