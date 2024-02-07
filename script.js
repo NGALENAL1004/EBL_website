@@ -7,6 +7,18 @@ menu.addEventListener('click', function () {
     navbar.classList.toggle('nav-toggle');
 })
 
+ /*Popup script*/
+ document.querySelectorAll('.box-container img').forEach(image => {
+  image.onclick = () => {
+      document.querySelector('.popup-image').style.display = 'block';
+      document.querySelector('.popup-image img').src = image.getAttribute('src')
+  }
+});
+
+document.querySelector('.popup-image span').onclick = () => {
+  document.querySelector('.popup-image').style.display = 'none';
+}
+
 
 /*Home script*/
 let slideIndex = 0;

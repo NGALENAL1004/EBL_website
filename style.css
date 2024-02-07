@@ -578,6 +578,10 @@ header .fa-bars {
 }
 
 /*Services section style*/
+.services{
+    position: relative;
+}
+
 .services .box-container {
     display: flex;
     align-items: center;
@@ -640,6 +644,36 @@ header .fa-bars {
     align-items: center;
     justify-content: center;
     margin: 1rem;
+}
+
+.popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display:none;
+}
+
+.popup-image span{
+    top: 5rem; right: 5rem;
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    border: .5rem solid var(--white);
+    border-radius: .5rem;
+    width: 75rem;
+    object-fit: cover;
 }
 
 .servicepage .text-area {
@@ -828,6 +862,106 @@ header .fa-bars {
 .projects .box-container .box .content .link i {
     color: var(--white);
     font-size: 2rem;
+}
+
+/*Projectspage style*/
+.achievements p{
+    color: var(--grey);
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 5rem;
+}
+
+.achievements .row{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 1rem;
+}
+
+.achievements .row .box{
+    width: 45rem;
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.achievements .row .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.achievements .row .box .content{
+    position: absolute;
+    left: 0; bottom: -100%;
+    padding-top: 20rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background:rgba(0,0,0,.7);
+    transition: all .2s linear;
+}
+
+.achievements .row .box:hover .content{
+    cursor: pointer;
+    bottom: 0;
+    transition: all .2s linear;
+}
+
+.achievements .row .box .content h3{
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.achievements .row .box .content p{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--white);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    border: .1rem solid var(--grey);
+    width: 100rem;
+}
+
+.modal-content .slides {
+    display: flex;
+    overflow-x: auto;
+    margin: 2rem;
+}
+
+.modal-content .slides img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+.close {
+    position: absolute;
+    color: var(--white);
+    top: 8rem; right: 5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /*HSEpage section style*/
@@ -1717,6 +1851,10 @@ textarea:focus {
     .commitment .container .content:nth-child(2){
         flex-direction:  row-reverse;
     }
+
+    .modal-content {
+        width: 70rem;
+    }
 }
 
 @media (max-width:705px) {
@@ -1809,6 +1947,10 @@ textarea:focus {
 
     .servicepage .row .content:nth-child(6) {
         flex-wrap: wrap-reverse;
+    }
+
+    .modal-content {
+        width: 50rem;
     }
 }
 
