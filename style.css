@@ -652,12 +652,12 @@ header .fa-bars {
     background: rgba(0,0,0,.9);
     height: 100%;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
     display:none;
 }
 
 .popup-image span{
-    top: 5rem; right: 5rem;
+    top: 8rem; right: 3rem;
     position: absolute;
     font-size: 4rem;
     font-weight: bolder;
