@@ -252,7 +252,6 @@ header .fa-bars {
     transform: skewX(-20deg);
 }
 
-
 .about .row .image {
     flex: 1 1 40rem;
     padding: 0 5rem;
@@ -276,7 +275,6 @@ header .fa-bars {
     transform: translateY(0);
 }
 
-
 .about .row .image img {
     height: 45rem;
     width: 55rem;
@@ -291,7 +289,8 @@ header .fa-bars {
 .about .row .content p {
     font-size: 1.8rem;
     color: var(--grey);
-    padding: 0rem .2rem;
+    padding: 1rem .2rem;
+    text-align: justify;
 }
 
 .about .row .btn {
@@ -365,8 +364,6 @@ header .fa-bars {
 
 .presentation .row {
     margin: 5rem 20rem;
-    display: flex;
-    flex-direction: column;
     opacity: 0;
     transform: translateY(2rem);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -377,23 +374,11 @@ header .fa-bars {
     transform: translateY(0);
 }
 
-.presentation .row .image {
-    flex: 1;
-}
-
-.presentation .row .image img {
-    width: 40%;
-    height: 90%;
-}
-
-.presentation .row .content {
-    flex: 2;
-}
-
 .presentation .row .content p {
     font-size: 2rem;
     padding: 1rem;
     color: var(--grey);
+    text-align: justify;
 }
 
 .ambition {
@@ -538,7 +523,7 @@ header .fa-bars {
 }
 
 .management h2 {
-    text-align: center;
+    text-align: justify;
     margin: 3rem 5rem;
     font-weight: 400;
     font-size: 2rem;
@@ -575,6 +560,7 @@ header .fa-bars {
     flex: 2 40rem;
     font-size: 2rem;
     margin: 0 5rem;
+    text-align: justify;
 }
 
 /*Services section style*/
@@ -652,18 +638,18 @@ header .fa-bars {
     background: rgba(0,0,0,.9);
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     display:none;
 }
 
 .popup-image span{
-    top: 8rem; right: 3rem;
+    top: 3rem; right: 3rem;
     position: absolute;
     font-size: 4rem;
     font-weight: bolder;
     color: var(--white);
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .popup-image img{
@@ -683,6 +669,7 @@ header .fa-bars {
 .servicepage .text-area p {
     font-size: 2rem;
     color: var(--grey);
+    text-align: justify;
 }
 
 .servicepage .row {
@@ -709,6 +696,7 @@ header .fa-bars {
     font-size: 2rem;
     color: var(--grey);
     width: 40rem;
+    text-align: justify;
 }
 
 .servicepage .row .content .image {
@@ -717,11 +705,6 @@ header .fa-bars {
     border-radius: 2rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
 
-}
-
-.servicepage .row .content .image2 {
-    width: 30rem;
-    height: 30rem;
 }
 
 .servicepage .row .content .image img {
@@ -737,41 +720,24 @@ header .fa-bars {
     transform: scale(1.03);
 }
 
-
-.servicepage .row .content .image2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .servicepage .row .content .image {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
     transform: translateX(-10%);
 }
 
-.servicepage .row .content .image2 {
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-    transform: translateX(10%);
-}
-
-.servicepage .row .content:nth-child(odd) .image,
-.servicepage .row .content:nth-child(even) .image2 {
+.servicepage .row .content:nth-child(odd) .image {
     transform-origin: left center;
 }
 
-.servicepage .row .content:nth-child(odd) .image2,
 .servicepage .row .content:nth-child(even) .image {
     transform-origin: right center;
 }
 
-.servicepage .row .content.show .image,
-.servicepage .row .content.show .image2 {
+.servicepage .row .content.show .image {
     opacity: 1;
     transform: translateX(0%);
 }
-
 
 
 /*Projects section style*/
@@ -786,7 +752,6 @@ header .fa-bars {
     justify-content: center;
     margin: 1rem;
 }
-
 
 .projects .box-container {
     display: flex;
@@ -868,7 +833,7 @@ header .fa-bars {
 .achievements p{
     color: var(--grey);
     font-size: 2rem;
-    text-align: center;
+    text-align: justify;
     margin: 3rem 5rem;
 }
 
@@ -920,6 +885,7 @@ header .fa-bars {
 .achievements .row .box .content p{
     color: var(--white);
     font-size: 2rem;
+    text-align: center;
 }
 
 .modal {
@@ -950,7 +916,7 @@ header .fa-bars {
 
 .modal-content .slides img {
     width: 80%;
-    height: auto;
+    height: 45rem;
     object-fit: cover;
     padding: 1rem;
 }
@@ -1001,6 +967,7 @@ header .fa-bars {
 .hse .row .content p {
     font-size: 2rem;
     color: var(--grey);
+    text-align: justify;
 }
 
 .hse h2{
@@ -1081,8 +1048,8 @@ header .fa-bars {
 
 .commitment h2{
     font-size: 2rem;
-    margin: 2rem;
-    text-align: center;
+    margin: 3rem;
+    text-align: justify;
     color: var(--grey);
 }
 
@@ -1105,9 +1072,12 @@ header .fa-bars {
 }
 
 .commitment .container .content .image img{
-    width: 35rem;
-    height: 35rem;
+    width: 30rem;
+    height: 30rem;
     object-fit: cover;
+    border-radius: 100%;
+    border: .5rem solid var(--green);
+    margin: 0 2rem;
 }
 
 .commitment .container .content ul{
@@ -1117,8 +1087,8 @@ header .fa-bars {
 .commitment .container .content ul li{
     font-size: 1.8rem;
     padding: 1rem 0;
+    text-align: justify;
 }
-
 
 .goals {
     background: var(--white2);
@@ -1128,7 +1098,7 @@ header .fa-bars {
 .goals p {
     font-size: 2rem;
     margin: 1rem 0;
-    text-align: center;
+    text-align: justify;
 }
 
 .goals .row {
@@ -1189,7 +1159,7 @@ header .fa-bars {
     color: var(--white);
     font-size: 2rem;
     margin: 1rem 0;
-    text-align: center;
+    text-align: justify;
 }
 
 .politics .container {
@@ -1201,6 +1171,10 @@ header .fa-bars {
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
+}
+
+.politics .container .content:nth-child(2){
+    flex-direction: row-reverse;
 }
 
 .politics .container .content .image {
@@ -1228,9 +1202,17 @@ header .fa-bars {
     padding-left: 15rem;
 }
 
+.politics .container .content:nth-child(2) ul {
+    width: 65rem;
+    padding-right: 15rem;
+    padding-left: 0;
+}
+
 .politics .container .content ul li {
     font-size: 2rem;
     color: var(--white);
+    text-align: justify;
+    padding-top: .5rem;
 }
 
 
