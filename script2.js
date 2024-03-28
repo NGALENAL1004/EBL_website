@@ -81,32 +81,41 @@ $(document).ready(function () {
 });
 
 /*Consumer script*/
-$(document).ready(function () {
-  $(".consumer-container").owlCarousel({
-    loop: true,
-    margin: 5,
+$(document).ready(function(){
+  // Fonction pour démarrer le carrousel
+  function startCarousel() {
+      $(".consumer-container").owlCarousel({
+          loop:true,
+          margin:5,
+          autoplay:true,
+          autoplayTimeout:1500,
+          autoplayHoverPause:true,
+          autoplaySpeed: 1000,
+          responsive:{
+              0:{
+                  items:1 
+              },
+              250:{
+                  items:2 
+              },
+              500:{
+                  items:3 
+              },
+              700:{
+                  items:4 
+              },
+              1000:{
+                  items:6 
+              }
+          }
+      });
+  }
 
-    autoplay: true,
-    autoplayTimeout: 1500,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    responsive: {
-      0: {
-        items: 1
-      },
-      250: {
-        items: 2
-      },
-      500: {
-        items: 3
-      },
-      700: {
-        items: 4
-      },
-      1000: {
-        items: 6
-      }
-    }
+  // Détection de quand l'élément est visible à 10% de l'écran
+  $(".consumer").waypoint(function() {
+      startCarousel(); // Démarrer le carrousel une fois qu'il est visible
+  }, {
+      offset: '98%' // Déclencher à 10% de la hauteur de la fenêtre
   });
 });
 

@@ -118,7 +118,7 @@ header .navbar ul {
 header .navbar ul li a {
     font-size: 1.8rem;
     color: var(--grey);
-    padding: 2.7rem 2rem;
+    padding: 2.62rem 2rem;
 }
 
 header .navbar ul li a span {
@@ -511,6 +511,7 @@ header .fa-bars {
 .values .text p {
     margin: .5rem;
     font-size: 2.2rem;
+    text-align: center;
 }
 
 .values .text li {
@@ -1393,9 +1394,9 @@ textarea:focus {
     object-fit: cover;
 }
 
+/*Footer Style Section*/
 .footer {
     background: var(--blue);
-
 }
 
 .footer .box-container {
