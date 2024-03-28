@@ -500,6 +500,10 @@ header .fa-bars {
     padding: 0rem;
 }
 
+.values .box-container .box:nth-of-type(3) .value p {
+    padding: 0rem;
+}
+
 .values .text {
     display: flex;
     flex-direction: column;
